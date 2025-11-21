@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: 'Mulish', sans-serif;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    gap: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.counter {
+    gap: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    color: white;
+    line-height: 1;
+    font-size: 120px;
+    font-weight: 800;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.counter span:nth-child(2) {
+    opacity: 0.6;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* --- Stars --- */
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    background: whitesmoke;
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .center {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-height: 900px) and (max-width: 800px) {
+    .counter {
+        font-size: 80px;
+    }
+
+    .counter span:nth-child(2) {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-height: 700px) and (max-width: 800px) {
+    .counter {
+        gap: 4px;
+        font-size: 60px;
+    }
+
+    .counter span:nth-child(2) {
+        font-size: 20px;
+    }
+}

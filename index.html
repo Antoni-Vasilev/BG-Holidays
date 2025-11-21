@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Български Празници</title>
+
+    <link rel="icon" href="/assets/img/round_icon_24x24.png"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+<div class="center">
+    <div class="counter">
+        <span id="time_days">00</span>
+        <span>days</span>
+    </div>
+    <div class="counter">
+        <span id="time_hours">00</span>
+        <span>hours</span>
+    </div>
+    <div class="counter">
+        <span id="time_minutes">00</span>
+        <span>minutes</span>
+    </div>
+    <div class="counter">
+        <span id="time_seconds">00</span>
+        <span>seconds</span>
+    </div>
+</div>
+
+<script>
+    const update_interval = 1000;
+    let now = new Date();
+
+    setInterval(() => now = new Date());
+</script>
+<script src="/assets/js/background_controller.js"></script>
+<script src="/assets/js/countdown_timer.js"></script>
+<script src="/assets/js/stars_controller.js"></script>
+
+</body>
+</html>
